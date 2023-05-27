@@ -14,10 +14,7 @@ def sortear(objeto)
 
   @time_azul = (goleiros.sample(goleiros.length - 1) + jogadores_linha.sample(jogadores_linha.length - 5))
   @time_preto = []
-
-  goleiros.each do |nome|
-    @time_preto << nome unless @time_azul.include?(nome)
-  end
+  goleiros.each { |nome| @time_preto << nome unless @time_azul.include?(nome) }
 
   jogadores_linha.each do |nome|
     next if @time_preto.length == 6
