@@ -7,11 +7,11 @@ ruby '3.2.0'
 
 gem 'dotenv'
 gem 'httparty'
-gem 'puma'
 gem 'rake'
 gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'sqlite3'
+gem 'thin'
 
 group :test do
   gem 'rack-test'
