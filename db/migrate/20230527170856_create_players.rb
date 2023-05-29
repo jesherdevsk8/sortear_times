@@ -8,6 +8,7 @@ class CreatePlayers < ActiveRecord::Migration[7.0]
       t.integer :shirt_number
       t.boolean :active, default: false, null: false
       t.integer :score_goal
+      t.boolean :goalkeeper, default: false, null: false
 
       t.timestamps
     end
