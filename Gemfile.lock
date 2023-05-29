@@ -16,7 +16,6 @@ GEM
     concurrent-ruby (1.2.2)
     daemons (1.4.1)
     diff-lcs (1.5.0)
-    docile (1.4.0)
     dotenv (2.8.1)
     eventmachine (1.0.9.1)
     httparty (0.21.0)
@@ -56,12 +55,6 @@ GEM
       rspec-support (~> 3.12.0)
     rspec-support (3.12.0)
     ruby2_keywords (0.0.5)
-    simplecov (0.22.0)
-      docile (~> 1.1)
-      simplecov-html (~> 0.11)
-      simplecov_json_formatter (~> 0.1)
-    simplecov-html (0.12.3)
-    simplecov_json_formatter (0.1.4)
     sinatra (3.0.6)
       mustermann (~> 3.0)
       rack (~> 2.2, >= 2.2.4)
@@ -86,10 +79,10 @@ DEPENDENCIES
   dotenv
   httparty
   pry-byebug
+  rack
   rack-test
   rake
   rspec
-  simplecov
   sinatra
   sinatra-activerecord
   sqlite3

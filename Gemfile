@@ -7,6 +7,7 @@ ruby '3.2.0'
 
 gem 'dotenv'
 gem 'httparty'
+gem 'rack'
 gem 'rake'
 gem 'sinatra'
 gem 'sinatra-activerecord'
@@ -20,5 +21,4 @@ end
 
 group :development do
   gem 'pry-byebug'
-  gem 'simplecov'
 end
