@@ -17,7 +17,8 @@ module Players
         nickname: @params[:nickname],
         shirt_number: @params[:shirt_number],
         active: @params[:active],
-        score_goal: @params[:score_goal]
+        score_goal: @params[:score_goal],
+        goalkeeper: @params[:goalkeeper]
       )
 
       @player_repository.find_or_create_by(
@@ -25,7 +26,8 @@ module Players
         nickname: player.nickname,
         shirt_number: player.shirt_number,
         active: player.active,
-        score_goal: player.score_goal
+        score_goal: player.score_goal,
+        goalkeeper: player.goalkeeper
       )
     end
   end
