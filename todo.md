@@ -6,6 +6,8 @@ TODO
 
 adicionar filtro na url
 adicionar activerecord validations
+
+fazer endpoint para sortear times pegar usuarios da base
 example
 
 ```ruby

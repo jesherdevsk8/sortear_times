@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rake dev:add_player dev:add_goalkeeper
 require './app'
 require './app/model/player'
 
@@ -21,7 +22,7 @@ namespace :dev do
       { name: 'Francisco Duarte', nickname: 'Gordo', shirt_number: 14, status: 'reserva', score_goal: 0, position: 'linha' },
       { name: 'Ronaldo Duarte', nickname: 'Nardim', shirt_number: 28, status: 'reserva', score_goal: 0, position: 'linha' },
       { name: 'Francisco', nickname: 'Francisco', shirt_number: 30, status: 'reserva', score_goal: 0, position: 'linha' },
-      { name: 'Fernando Duarte', nickname: 'Francisco', shirt_number: 3, status: 'titular', score_goal: 0, position: 'linha' },
+      { name: 'Fernando Duarte', nickname: 'Fernando', shirt_number: 3, status: 'titular', score_goal: 0, position: 'linha' },
       { name: 'Wilian', nickname: 'Wilian', shirt_number: 10, status: 'reserva', score_goal: 0, position: 'linha' },
       { name: 'Lincoln Souza', nickname: 'Lincoln', shirt_number: 88, status: 'reserva', score_goal: 0, position: 'linha' },
       { name: 'Luan Henrique', nickname: 'Luan', shirt_number: 99, status: 'reserva', score_goal: 0, position: 'linha' },
