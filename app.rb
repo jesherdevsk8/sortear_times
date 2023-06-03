@@ -6,6 +6,7 @@ require 'sinatra/activerecord'
 require 'dotenv/load'
 
 require './app/adapters/controllers/players_controller'
+require './app/adapters/controllers/raffle_controller'
 
 set :database, { adapter: 'sqlite3', database: ENV.fetch('DB_PATH', nil) }
 # TODO: add enviroments like rails aplication [dev, test, prod]
@@ -18,4 +19,8 @@ end
 
 get '/players' do
   { result: PlayersController.index }.to_json
+end
+
+get '/raffle' do
+  { result: PlayersController.raffle }.to_json
 end

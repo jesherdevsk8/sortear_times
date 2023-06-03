@@ -6,10 +6,3 @@ TODO
 
 adicionar filtro na url
 adicionar activerecord validations
-
-fazer endpoint para sortear times pegar usuarios da base
-example
-
-```ruby
-Player.order(:name, :desc).nickname
-```
