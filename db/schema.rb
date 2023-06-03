@@ -15,9 +15,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_27_170856) do
     t.string "name", null: false
     t.string "nickname"
     t.integer "shirt_number"
-    t.boolean "active", default: false, null: false
-    t.integer "score_goal"
-    t.boolean "goalkeeper", default: false, null: false
+    t.string "status"
+    t.integer "score_goal", default: 0
+    t.string "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

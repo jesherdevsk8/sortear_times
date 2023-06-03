@@ -8,6 +8,7 @@ require 'dotenv/load'
 require './app/adapters/controllers/players_controller'
 
 set :database, { adapter: 'sqlite3', database: ENV.fetch('DB_PATH', nil) }
+# set :database, { adapter: 'sqlite3', database: ENV.fetch('DB_PATH_TEST', nil) }
 
 post '/players' do
   { result: PlayersController.create(params) }.to_json
