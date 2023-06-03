@@ -16,18 +16,18 @@ module Players
         name: @params[:name],
         nickname: @params[:nickname],
         shirt_number: @params[:shirt_number],
-        active: @params[:active],
+        status: @params[:status],
         score_goal: @params[:score_goal],
-        goalkeeper: @params[:goalkeeper]
+        position: @params[:position]
       )
 
       @player_repository.find_or_create_by(
         name: player.name,
         nickname: player.nickname,
         shirt_number: player.shirt_number,
-        active: player.active,
+        status: player.status,
         score_goal: player.score_goal,
-        goalkeeper: player.goalkeeper
+        position: player.position
       )
     end
   end
