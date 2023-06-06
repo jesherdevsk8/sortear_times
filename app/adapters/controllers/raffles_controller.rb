@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'pry-byebug'
-require './app/usecases/raffle/team'
+require './app/usecases/raffles/team'
 
-class PlayersController
+class RafflesController
   def self.raffle
     Raffle::Team.call
   end
