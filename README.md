@@ -17,10 +17,17 @@ bundle exec rake -T
 - run migrations
 
 ```bash
-
 bundle exec rake db:create
 
 bundle exec rake db:create_migration NAME=create_players
 
 bundle exec rake db:migrate
+```
+
+- rails console equivalent for Sinatra
+
+```ruby
+bundle exec irb -I. -r app.rb
+require 'sinatra/activerecord'
+require './app/model/player'
 ```

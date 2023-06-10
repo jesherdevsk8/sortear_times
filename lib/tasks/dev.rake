@@ -39,7 +39,10 @@ namespace :dev do
       )
     end
   end
+end
 
+namespace :dev do
+  desc 'Add goalkeepers to development'
   task add_goalkeeper: 'db:environment' do
     [
       { name: 'Jesher Minelli', nickname: 'Jesher', shirt_number: 22, status: 'titular', score_goal: 2, position: 'goleiro' },

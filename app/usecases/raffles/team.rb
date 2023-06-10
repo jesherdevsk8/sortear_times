@@ -13,7 +13,7 @@ module Raffle
       goleiro = []
       Player.where(status: 'titular', position: 'goleiro').each { |g| goleiro << g.nickname }
       Player.where(status: 'titular', position: 'linha').each { |g| linha << g.nickname }
-      sortear(goleiro, linha)
+      sortear(goleiro, linha) unless goleiro.empty? || linha.empty?
     end
 
     def self.sortear(goleiros, jogadores_linha)
