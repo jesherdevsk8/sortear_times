@@ -28,8 +28,8 @@ module Raffle
       end
 
       [
-        'Time Preto': @time_preto.join(', '),
-        'Time Azul': @time_azul.join(', ')
+        ['time-preto': @time_preto],
+        ['time-azul': @time_azul]
       ]
     end
   end
