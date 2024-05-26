@@ -12,6 +12,8 @@ Sinatra ActiveRecord Extension - [github/sinatra-activerecod](https://github.com
 
 ```bash
 bundle exec rake -T
+bundle exec rake dev:add_goalkeeper
+bundle exec rake dev:player
 ```
 
 - run migrations
@@ -21,7 +23,20 @@ bundle exec rake db:create RACK_ENV=development
 
 bundle exec rake db:create_migration NAME=create_players
 
-bundle exec rake db:migrate
+bundle exec rake db:migrate RACK_ENV=development
+
+RACK_ENV=development ruby app.rb
+```
+
+- run migrations to test rspec
+
+```bash
+bundle exec rake db:create_migration NAME=create_players
+
+bundle exec rake db:migrate RACK_ENV=test
+
+RACK_ENV=test bundle exec rake spec:all
+RACK_ENV=test bundle exec rspec ./spec/app/usecases/raffle/team_spec.rb
 ```
 
 - rails console equivalent for Sinatra
@@ -30,4 +45,16 @@ bundle exec rake db:migrate
 bundle exec irb -I. -r app.rb
 require 'sinatra/activerecord'
 require './app/model/player'
+```
+
+- to deploy sinatra app
+
+```bash
+bundle exec rake db:create RACK_ENV=production
+
+bundle exec rake db:create_migration NAME=create_players
+
+bundle exec rake db:migrate RACK_ENV=production
+
+RACK_ENV=production ruby app.rb
 ```
