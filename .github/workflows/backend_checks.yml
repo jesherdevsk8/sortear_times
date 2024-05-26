@@ -1,0 +1,31 @@
+name: Ruby
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+
+    - name: Set up database
+      env:
+        RACK_ENV: test
+      run: |
+        bundle exec rake db:create db:schema:load
+
+    - name: Run tests
+      env:
+        RACK_ENV: test
+      run: bundle exec rake spec:all
