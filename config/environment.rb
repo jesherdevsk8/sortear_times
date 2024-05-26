@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
-require 'rubygems'
 require 'bundler'
-Bundler.require(:default)                   # load all the default gems
-Bundler.require(Sinatra::Base.environment)  # load all the environment specific gems
-require 'active_support/deprecation'
-require 'active_support/all'
-require 'dotenv/load'
+Bundler.require
 
-set :database, { adapter: 'sqlite3', database: ENV.fetch('DB_PATH', nil) }
+require 'dotenv/load'
+require_relative 'database'
+
+# # get the path of the root of the app
+# APP_ROOT = File.expand_path('.', __dir__)
+
+# # require database configurations
+# require File.join(APP_ROOT, 'config', 'database')

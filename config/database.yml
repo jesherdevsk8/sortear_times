@@ -1,0 +1,16 @@
+default: &default
+  adapter: sqlite3
+  pool: <%= ENV.fetch("MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/rachao_development.sqlite3
+
+test:
+  <<: *default
+  database: db/rachao_test.sqlite3
+
+production:
+  <<: *default
+  database: ddb/rachao_production.sqlite3

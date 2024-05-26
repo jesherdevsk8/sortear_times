@@ -2,6 +2,7 @@
 
 ENV['RACK_ENV'] = 'test'
 
+require 'rack/test'
 require './config/environment'
 
 RSpec.configure do |config|

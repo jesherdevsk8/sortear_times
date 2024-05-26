@@ -4,9 +4,9 @@ require './app/model/player'
 require './app/adapters/repositories/player_repository'
 
 module Players
-  class Show
+  class Index
     def self.call
-      Player.where(status: Player::STATUS[0]).order(:position)
+      Player.order(:name, :desc)
     end
   end
 end
