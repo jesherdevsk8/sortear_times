@@ -23,7 +23,9 @@ jobs:
       env:
         RACK_ENV: test
       run: |
-        bundle exec rake db:create db:schema:load
+        bundle exec rake db:create_migration NAME=create_players
+        bundle exec rake db:create
+        bundle exec rake db:migrate
 
     - name: Run tests
       env:
