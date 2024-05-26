@@ -17,7 +17,7 @@ bundle exec rake -T
 - run migrations
 
 ```bash
-bundle exec rake db:create
+bundle exec rake db:create RACK_ENV=development
 
 bundle exec rake db:create_migration NAME=create_players
 
