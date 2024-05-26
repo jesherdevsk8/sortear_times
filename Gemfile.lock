@@ -80,6 +80,7 @@ DEPENDENCIES
   dotenv
   httparty
   pg
+  pry
   pry-byebug
   rack
   rack-test
