@@ -9,10 +9,8 @@ require './app/adapters/repositories/player_repository'
 module Raffle
   class Team
     def self.call
-      linha = []
-      goleiro = []
-      Player.where(status: 'titular', position: 'goleiro').each { |g| goleiro << g.nickname }
-      Player.where(status: 'titular', position: 'linha').each { |g| linha << g.nickname }
+      linha = Player.where(status: 'titular', position: 'linha').map(&:nickname)
+      goleiro = Player.where(status: 'titular', position: 'goleiro').map(&:nickname)
       sortear(goleiro, linha) unless goleiro.empty? || linha.empty?
     end
 
