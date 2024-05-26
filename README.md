@@ -31,12 +31,12 @@ RACK_ENV=development ruby app.rb
 - run migrations to test rspec
 
 ```bash
-bundle exec rake db:create_migration NAME=create_players
-
-bundle exec rake db:migrate RACK_ENV=test
-
-RACK_ENV=test bundle exec rake spec:all
-RACK_ENV=test bundle exec rspec ./spec/app/usecases/raffle/team_spec.rb
+export RACK_ENV=test
+bundle install
+bundle exec rake db:create
+bundle exec rake db:migrate
+bundle exec rake spec:all
+bundle exec rspec ./spec/app/usecases/raffle/team_spec.rb
 ```
 
 - rails console equivalent for Sinatra
