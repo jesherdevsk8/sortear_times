@@ -3,9 +3,6 @@
 require 'spec_helper'
 require './app/model/player'
 
-set :database, { adapter: 'sqlite3', database: ENV.fetch('DB_PATH_TEST', nil) }
-# RUN rake db:create db:migrate to create a db test
-
 RSpec.describe Player do
   context 'with valid player' do
     let(:player) do
