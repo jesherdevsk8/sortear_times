@@ -13,4 +13,4 @@ test:
 
 production:
   <<: *default
-  database: ddb/rachao_production.sqlite3
+  database: db/rachao_production.sqlite3
