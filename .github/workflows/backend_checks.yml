@@ -20,14 +20,10 @@ jobs:
         bundle install --jobs 4 --retry 3
 
     - name: Set up database
-      env:
-        RACK_ENV: test
       run: |
-        bundle exec rake db:create_migration NAME=create_players
-        bundle exec rake db:create
-        bundle exec rake db:migrate
+        RACK_ENV=test bundle exec rake db:create
+        RACK_ENV=test bundle exec rake db:create_migration NAME=create_players
+        RACK_ENV=test bundle exec rake db:migrate
 
     - name: Run tests
-      env:
-        RACK_ENV: test
-      run: bundle exec rake spec:all
+      run: RACK_ENV=test bundle exec rake spec:all
