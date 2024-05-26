@@ -45,4 +45,23 @@ RSpec.describe Player do
       expect(player.errors[:nickname]).to include("can't be blank")
     end
   end
+
+  context 'callbacks' do
+    let(:player) do
+      described_class.new(
+        name: 'John Doe',
+        nickname: 'John Doe',
+        shirt_number: '7',
+        status: 'reserva',
+        score_goal: 0,
+        position: 'linha'
+      )
+    end
+
+    it 'converts nickname to slug before saving' do
+      player.save!
+
+      expect(player.nickname).to eq('john-doe')
+    end
+  end
 end
