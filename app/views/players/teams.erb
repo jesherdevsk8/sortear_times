@@ -23,7 +23,7 @@
             Time Preto
           </div>
           <ul class="list-group list-group-flush">
-            <% @teams[0][:'time-preto'].each do |team| %>
+            <% @teams&.[](0)&.[](:'time-preto')&.each do |team| %>
               <li class="list-group-item"><%= team %></li>
             <% end %>
           </ul>
@@ -35,7 +35,7 @@
             Time Azul
           </div>
           <ul class="list-group list-group-flush">
-            <% @teams[1][:'time-azul'].each do |team| %>
+            <% @teams&.[](1)&.[](:'time-azul')&.each do |team| %>
               <li class="list-group-item"><%= team %></li>
             <% end %>
           </ul>

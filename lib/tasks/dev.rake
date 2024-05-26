@@ -23,7 +23,7 @@ namespace :dev do
       { name: 'Ronaldo Duarte', nickname: 'Nardim', shirt_number: 28, status: 'reserva', score_goal: 0, position: 'linha' },
       { name: 'Francisco', nickname: 'Francisco', shirt_number: 30, status: 'reserva', score_goal: 0, position: 'linha' },
       { name: 'Fernando Duarte', nickname: 'Fernando', shirt_number: 3, status: 'titular', score_goal: 0, position: 'linha' },
-      { name: 'Wilian', nickname: 'Wilian', shirt_number: 10, status: 'reserva', score_goal: 0, position: 'linha' },
+      { name: 'Renan Polli', nickname: 'Renan', shirt_number: 10, status: 'reserva', score_goal: 0, position: 'linha' },
       { name: 'Lincoln Souza', nickname: 'Lincoln', shirt_number: 88, status: 'reserva', score_goal: 0, position: 'linha' },
       { name: 'Luan Henrique', nickname: 'Luan', shirt_number: 99, status: 'reserva', score_goal: 0, position: 'linha' },
       { name: 'João Gabriel', nickname: 'João', shirt_number: 20, status: 'reserva', score_goal: 0, position: 'linha' },
@@ -47,7 +47,8 @@ namespace :dev do
     [
       { name: 'Jesher Minelli', nickname: 'Jesher', shirt_number: 22, status: 'titular', score_goal: 2, position: 'goleiro' },
       { name: 'Paulo Golero', nickname: 'Paulão', shirt_number: 12, status: 'titular', score_goal: 0, position: 'goleiro' },
-      { name: 'José Carlos', nickname: 'Zé Carlos', shirt_number: 44, status: 'reserva', score_goal: 0, position: 'goleiro' },
+      { name: 'José Carlos', nickname: 'Ze Carlos', shirt_number: 44, status: 'reserva', score_goal: 0, position: 'goleiro' },
+      { name: 'Fransergio', nickname: 'Fransergio', shirt_number: 1, status: 'reserva', score_goal: 0, position: 'goleiro' },
       { name: 'Gustavo', nickname: 'Gustavo', shirt_number: 1, status: 'reserva', score_goal: 0, position: 'goleiro' }
     ].each do |player|
       Player.find_or_create_by(
