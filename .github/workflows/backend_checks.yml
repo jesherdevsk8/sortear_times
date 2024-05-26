@@ -19,6 +19,9 @@ jobs:
         gem install bundler
         bundle install --jobs 4 --retry 3
 
+    - name: Check database configuration
+      run: cat config/database.yml
+
     - name: Set up database
       env:
         RACK_ENV: test
