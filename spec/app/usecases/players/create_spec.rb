@@ -3,8 +3,6 @@
 require 'spec_helper'
 require './app/usecases/players/create'
 
-set :database, { adapter: 'sqlite3', database: ENV.fetch('DB_PATH_TEST', nil) }
-
 RSpec.describe Players::Create do
   context 'with new user' do
     let(:create_player) do
